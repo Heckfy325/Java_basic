@@ -1,44 +1,15 @@
-public class Book {
-    public String name;
-    public int title;
-    public String author;
-    public int rating;
+public class Main {
 
-    public static int maxRating = 0;
-    public static int maxTitle = 0;
-    int bookMark = 0;
+    public static void main(String[] args) {
 
-    public int getBookMark() {
-        return bookMark;
-    }
-
-    public void setBookMark(int bookMark) {
-        if (bookMark > maxTitle){
-            this.bookMark = maxTitle;
-        } else {
-            this.bookMark = bookMark;
+        System.out.println("Сравнение книг " + Book.maxRating);
+        Book book1 = new Book("Test1", 99, "JonhB", 5);
+        Book book2 = new Book("Test1", 78, "BobyB", 3);
+        book1.setBookMark(56);
+        System.out.println("Книга 1 " + book1);
+        System.out.println("Книга 2 " + book2);
+        System.out.println("Равны ли книги? " + book1.equals(book2));
+        System.out.println("В какой книге больше страниц? " + Book.maxTitle);
+        System.out.println("Результат сравнения " + book1.equals(book2));
         }
     }
-
-    public Book(String name, int title, String author, int rating){
-        this.name = name;
-        this.title = title;
-        this.author = author;
-        this.rating = rating;
-        if (rating > maxRating)
-            maxRating = rating;
-        if (title > maxTitle)
-            maxTitle = title;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", title=" + title +
-                ", author='" + author + '\'' +
-                ", rating=" + rating +
-                ", bookMark=" + bookMark +
-                '}';
-    }
-}
