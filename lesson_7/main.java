@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Сравнение книг " + Book.maxRating);
-        Book book1 = new Book("Test1", 99, "JonhB", 5);
-        Book book2 = new Book("Test1", 78, "BobyB", 3);
+        Book book1 = new Book("Test1", 99, "Пушкин", 5);
+        Book book2 = new Book("Test1", 78, "Толстой", 4);
         book1.setBookMark(56);
         System.out.println("Книга 1 " + book1);
         System.out.println("Книга 2 " + book2);
